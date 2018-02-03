@@ -39,4 +39,8 @@ public class FormElementTextEmail extends BaseFormElement {
         return (FormElementTextEmail)  super.setRequired(required);
     }
 
+    public FormElementTextEmail setEnabled(boolean enabled) {
+        return (FormElementTextEmail)  super.setEnabled(enabled);
+    }
+
 }

@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Form Master</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">[Make]</string>
+    <string name="process">Processing</string>
+    <string name="wait">Waiting for complete</string>
+    <string name="ok">Ok</string>
+    <string name="warning">Warning</string>
+    <string name="turn_left">Turn left</string>
+    <string name="turn_right">Turn right</string>
+    <string name="max_achieved">You have achieved MAX allowed pictures.</string>
+
 </resources>

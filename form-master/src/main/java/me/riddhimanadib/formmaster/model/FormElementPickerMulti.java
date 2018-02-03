@@ -48,6 +48,10 @@ public class FormElementPickerMulti extends BaseFormElement {
         return (FormElementPickerMulti)  super.setRequired(required);
     }
 
+    public FormElementPickerMulti setEnabled(boolean enabled) {
+        return (FormElementPickerMulti)  super.setEnabled(enabled);
+    }
+
     // custom setters
     public FormElementPickerMulti setOptions(List<String> mOptions) {
         this.options = mOptions;

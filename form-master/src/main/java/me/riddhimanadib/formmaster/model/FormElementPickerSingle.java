@@ -47,6 +47,10 @@ public class FormElementPickerSingle extends BaseFormElement {
         return (FormElementPickerSingle)  super.setRequired(required);
     }
 
+    public FormElementPickerSingle setEnabled(boolean enabled) {
+        return (FormElementPickerSingle)  super.setEnabled(enabled);
+    }
+
     // custom setters
     public FormElementPickerSingle setOptions(List<String> mOptions) {
         this.mOptions = mOptions;
