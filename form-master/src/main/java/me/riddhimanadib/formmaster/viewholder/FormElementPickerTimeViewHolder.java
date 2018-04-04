@@ -50,6 +50,8 @@ public class FormElementPickerTimeViewHolder extends BaseViewHolder {
         mFormElement = formElement;
         mPosition = position;
 
+        itemView.setEnabled(formElement.isEnabled());
+
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());

@@ -37,6 +37,7 @@ public class FormElementTextPasswordViewHolder extends BaseViewHolder {
 
     @Override
     public void bind(int position, BaseFormElement formElement, final Context context) {
+        itemView.setEnabled(formElement.isEnabled());
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());

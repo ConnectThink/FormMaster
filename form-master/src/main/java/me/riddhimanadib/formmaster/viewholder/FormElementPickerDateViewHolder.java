@@ -50,6 +50,8 @@ public class FormElementPickerDateViewHolder extends BaseViewHolder {
                 mCalendarCurrentDate.get(Calendar.MONTH),
                 mCalendarCurrentDate.get(Calendar.DAY_OF_MONTH));
 
+        itemView.setEnabled(formElement.isEnabled());
+
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());

@@ -40,6 +40,8 @@ public class FormElementPickerMultiViewHolder extends BaseViewHolder {
         mPosition = position;
         mFormElementPickerMulti = (FormElementPickerMulti) mFormElement;
 
+        itemView.setEnabled(formElement.isEnabled());
+
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());

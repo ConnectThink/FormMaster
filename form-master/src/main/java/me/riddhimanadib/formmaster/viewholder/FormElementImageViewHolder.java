@@ -191,6 +191,8 @@ public class FormElementImageViewHolder extends BaseViewHolder {
         min_pic = mFormElementImage.getMinPictureCount();
         max_pic = mFormElementImage.getMaxPictureCount();
 
+        itemView.setEnabled(formElement.isEnabled());
+
         //mEditTextValue.setHint(formElement.getHint());
         mLinearLayout.setFocusableInTouchMode(true);
         mLinearLayout.setEnabled(formElement.isEnabled());

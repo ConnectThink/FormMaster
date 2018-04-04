@@ -38,6 +38,8 @@ public class FormElementPickerSingleViewHolder extends BaseViewHolder {
         mPosition = position;
         mFormElementPickerSingle = (FormElementPickerSingle) mFormElement;
 
+        itemView.setEnabled(formElement.isEnabled());
+
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());

@@ -25,6 +25,8 @@ public class FormElementButtonHolder extends BaseViewHolder {
 
     @Override
     public void bind(int position, final BaseFormElement formElement, final Context context) {
+        itemView.setEnabled(formElement.isEnabled());
+
         mTextViewTitle.setText(formElement.getTitle());
 
         mTextViewTitle.setOnClickListener(new View.OnClickListener() {
