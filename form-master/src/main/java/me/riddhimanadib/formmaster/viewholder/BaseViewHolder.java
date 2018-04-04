@@ -25,7 +25,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder implements BaseViewH
 
     @Override
     public void bind(int position, BaseFormElement formElement, Context context) {
-
+        itemView.setEnabled(formElement.isEnabled());
     }
 
 }

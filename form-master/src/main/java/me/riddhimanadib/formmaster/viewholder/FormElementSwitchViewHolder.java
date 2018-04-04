@@ -39,11 +39,11 @@ public class FormElementSwitchViewHolder extends BaseViewHolder {
 
     @Override
     public void bind(final int position, BaseFormElement formElement, final Context context) {
+        super.bind(position, formElement, context);
+
         mFormElement = formElement;
         mPosition = position;
         mFormElementSwitch = (FormElementSwitch) mFormElement;
-
-        itemView.setEnabled(formElement.isEnabled());
 
         mTextViewTitle.setText(mFormElementSwitch.getTitle());
         mTextViewPositive.setText(mFormElementSwitch.getPositiveText());

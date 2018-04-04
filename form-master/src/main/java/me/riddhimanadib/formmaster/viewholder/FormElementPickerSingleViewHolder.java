@@ -34,11 +34,11 @@ public class FormElementPickerSingleViewHolder extends BaseViewHolder {
 
     @Override
     public void bind(final int position, BaseFormElement formElement, final Context context) {
+        super.bind(position, formElement, context);
+
         mFormElement = formElement;
         mPosition = position;
         mFormElementPickerSingle = (FormElementPickerSingle) mFormElement;
-
-        itemView.setEnabled(formElement.isEnabled());
 
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());

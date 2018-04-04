@@ -47,10 +47,10 @@ public class FormElementPickerTimeViewHolder extends BaseViewHolder {
 
     @Override
     public void bind(int position, BaseFormElement formElement, final Context context) {
+        super.bind(position, formElement, context);
+
         mFormElement = formElement;
         mPosition = position;
-
-        itemView.setEnabled(formElement.isEnabled());
 
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());

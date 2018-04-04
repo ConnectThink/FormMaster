@@ -41,6 +41,8 @@ public class FormElementPickerDateViewHolder extends BaseViewHolder {
 
     @Override
     public void bind(int position, BaseFormElement formElement, final Context context) {
+        super.bind(position, formElement, context);
+
         mFormElement = formElement;
         mPosition = position;
 
@@ -49,8 +51,6 @@ public class FormElementPickerDateViewHolder extends BaseViewHolder {
                 mCalendarCurrentDate.get(Calendar.YEAR),
                 mCalendarCurrentDate.get(Calendar.MONTH),
                 mCalendarCurrentDate.get(Calendar.DAY_OF_MONTH));
-
-        itemView.setEnabled(formElement.isEnabled());
 
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());

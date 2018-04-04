@@ -37,7 +37,8 @@ public class FormElementTextSingleLineViewHolder extends BaseViewHolder {
 
     @Override
     public void bind(int position, BaseFormElement formElement, final Context context) {
-        itemView.setEnabled(formElement.isEnabled());
+        super.bind(position, formElement, context);
+
         mTextViewTitle.setText(formElement.getTitle());
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());

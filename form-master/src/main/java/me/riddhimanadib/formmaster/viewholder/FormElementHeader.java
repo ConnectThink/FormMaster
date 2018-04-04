@@ -23,6 +23,8 @@ public class FormElementHeader extends BaseViewHolder {
 
     @Override
     public void bind(int position, BaseFormElement formElement, final Context context) {
+        super.bind(position, formElement, context);
+
         mTextViewTitle.setText(formElement.getTitle());
     }
 

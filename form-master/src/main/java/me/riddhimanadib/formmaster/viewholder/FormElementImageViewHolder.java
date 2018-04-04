@@ -160,6 +160,8 @@ public class FormElementImageViewHolder extends BaseViewHolder {
 
     @Override
     public void bind(int position, BaseFormElement formElement, final Context context) {
+        super.bind(position, formElement, context);
+
         mFormElement = formElement;
         mPosition = position;
         mFormElementImage = (FormElementImage) formElement;
@@ -190,8 +192,6 @@ public class FormElementImageViewHolder extends BaseViewHolder {
 
         min_pic = mFormElementImage.getMinPictureCount();
         max_pic = mFormElementImage.getMaxPictureCount();
-
-        itemView.setEnabled(formElement.isEnabled());
 
         //mEditTextValue.setHint(formElement.getHint());
         mLinearLayout.setFocusableInTouchMode(true);
