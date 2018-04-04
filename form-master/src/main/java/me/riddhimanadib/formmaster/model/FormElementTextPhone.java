@@ -38,5 +38,8 @@ public class FormElementTextPhone extends BaseFormElement {
     public FormElementTextPhone setRequired(boolean required) {
         return (FormElementTextPhone)  super.setRequired(required);
     }
-    
+
+    public FormElementTextPhone setEnabled(boolean enabled) {
+        return (FormElementTextPhone)  super.setEnabled(enabled);
+    }
 }

@@ -45,6 +45,10 @@ public class FormElementPickerDate extends BaseFormElement {
         return (FormElementPickerDate)  super.setRequired(required);
     }
 
+    public FormElementPickerDate setEnabled(boolean enabled) {
+        return (FormElementPickerDate)  super.setEnabled(enabled);
+    }
+
     // custom setter
     public FormElementPickerDate setDateFormat(String format) {
         checkValidDateFormat(format);

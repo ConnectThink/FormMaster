@@ -54,6 +54,7 @@ public class FormElementPickerDateViewHolder extends BaseViewHolder {
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());
         mEditTextValue.setFocusableInTouchMode(false);
+        mEditTextValue.setEnabled(formElement.isEnabled());
 
         mEditTextValue.setOnClickListener(new View.OnClickListener() {
             @Override

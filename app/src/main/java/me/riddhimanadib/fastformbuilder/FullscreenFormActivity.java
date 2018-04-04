@@ -4,13 +4,18 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateFormat;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import me.riddhimanadib.formmaster.FormBuilder;
 import me.riddhimanadib.formmaster.model.BaseFormElement;
+import me.riddhimanadib.formmaster.model.FormElementImage;
 import me.riddhimanadib.formmaster.model.FormElementPickerDate;
 import me.riddhimanadib.formmaster.model.FormElementPickerMulti;
 import me.riddhimanadib.formmaster.model.FormElementPickerSingle;
@@ -48,6 +53,10 @@ public class FullscreenFormActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
 
     private void setupToolBar() {
 
@@ -68,17 +77,23 @@ public class FullscreenFormActivity extends AppCompatActivity {
 
         FormHeader header1 = FormHeader.createInstance("Personal Info");
         FormElementTextEmail element11 = FormElementTextEmail.createInstance().setTitle("Email").setHint("Enter Email");
-        FormElementTextPhone element12 = FormElementTextPhone.createInstance().setTitle("Phone").setValue("+8801712345678");
+        FormElementTextPhone element12 = FormElementTextPhone.createInstance().setTitle("Phone").setValue("+8801712345678").setEnabled(false);
 
         FormHeader header2 = FormHeader.createInstance("Family Info");
-        FormElementTextSingleLine element21 = FormElementTextSingleLine.createInstance().setTitle("Location").setValue("Dhaka");
-        FormElementTextMultiLine element22 = FormElementTextMultiLine.createInstance().setTitle("Address");
+        FormElementTextSingleLine element21 = FormElementTextSingleLine.createInstance().setTitle("Location").setValue("Dhaka").setEnabled(false);
+        FormElementTextMultiLine element22 = FormElementTextMultiLine.createInstance().setTitle("Address").setEnabled(false);
         FormElementTextNumber element23 = FormElementTextNumber.createInstance().setTitle("Zip Code").setValue("1000");
 
         FormHeader header3 = FormHeader.createInstance("Schedule");
         FormElementPickerDate element31 = FormElementPickerDate.createInstance().setTitle("Date").setDateFormat("MMM dd, yyyy");
         FormElementPickerTime element32 = FormElementPickerTime.createInstance().setTitle("Time").setTimeFormat("KK hh");
         FormElementTextPassword element33 = FormElementTextPassword.createInstance().setTitle("Password").setValue("abcd1234");
+
+        FormHeader header41 = FormHeader.createInstance("Photo");
+        Calendar cal = Calendar.getInstance(Locale.getDefault());
+        String date = DateFormat.format("dd-MM-yyyy HH:mm:ss", cal).toString();
+
+        FormElementImage element334 = FormElementImage.createInstance().setTitle(date).setEnabled(false).setMaxPictureCount(10);
 
         FormHeader header4 = FormHeader.createInstance("Preferred Items");
         List<String> fruits = new ArrayList<>();
@@ -102,6 +117,8 @@ public class FullscreenFormActivity extends AppCompatActivity {
         formItems.add(element31);
         formItems.add(element32);
         formItems.add(element33);
+        formItems.add(header41);
+        formItems.add(element334);
         formItems.add(header4);
         formItems.add(element41);
         formItems.add(element42);

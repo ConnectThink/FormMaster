@@ -1,8 +1,5 @@
 package me.riddhimanadib.formmaster.model;
 
-/**
- * Created by Riddhi - Rudra on 28-Jul-17.
- */
 
 public class FormElementTextSingleLine extends BaseFormElement {
 
@@ -37,6 +34,10 @@ public class FormElementTextSingleLine extends BaseFormElement {
 
     public FormElementTextSingleLine setRequired(boolean required) {
         return (FormElementTextSingleLine)  super.setRequired(required);
+    }
+
+    public FormElementTextSingleLine setEnabled(boolean enabled) {
+        return (FormElementTextSingleLine)  super.setEnabled(enabled);
     }
 
 }

@@ -38,5 +38,9 @@ public class FormElementTextNumber extends BaseFormElement {
     public FormElementTextNumber setRequired(boolean required) {
         return (FormElementTextNumber)  super.setRequired(required);
     }
+
+    public FormElementTextNumber setEnabled(boolean enabled) {
+        return (FormElementTextNumber)  super.setEnabled(enabled);
+    }
     
 }

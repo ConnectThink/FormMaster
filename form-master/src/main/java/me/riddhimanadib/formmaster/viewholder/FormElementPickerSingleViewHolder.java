@@ -42,6 +42,7 @@ public class FormElementPickerSingleViewHolder extends BaseViewHolder {
         mEditTextValue.setText(formElement.getValue());
         mEditTextValue.setHint(formElement.getHint());
         mEditTextValue.setFocusableInTouchMode(false);
+        mEditTextValue.setEnabled(formElement.isEnabled());
 
         // reformat the options in format needed
         final CharSequence[] options = new CharSequence[mFormElementPickerSingle.getOptions().size()];

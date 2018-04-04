@@ -22,6 +22,7 @@ public class BaseFormElement {
     public static final int TYPE_LABEL = 12;
     public static final int TYPE_BUTTON = 13;
     public static final int TYPE_CLICKABLE_LABEL = 14;
+    public static final int TYPE_IMAGE = 15;
 
     // private variables
     private int mTag; // unique tag to identify the object
@@ -30,6 +31,16 @@ public class BaseFormElement {
     private String mValue; // value to be shown on right
     private String mHint; // value to be shown if mValue is null
     private boolean mRequired; // value to set is the field is required
+    private boolean mEnabled = true; // value to set is the field is required
+
+    public boolean isEnabled() {
+        return mEnabled;
+    }
+
+    public BaseFormElement setEnabled(boolean mEnabled) {
+        this.mEnabled = mEnabled;
+        return this;
+    }
 
     // setters
     public BaseFormElement setTag(int mTag) {
@@ -96,6 +107,7 @@ public class BaseFormElement {
                 ", mValue='" + mValue + '\'' +
                 ", mHint='" + mHint + '\'' +
                 ", mRequired=" + mRequired +
+                ", mEnabled=" + mEnabled +
                 '}';
     }
 }
