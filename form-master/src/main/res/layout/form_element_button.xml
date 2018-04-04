@@ -25,7 +25,7 @@
             android:layout_weight="1"
             android:padding="16dp"
             android:textAlignment="center"
-            android:textColor="@color/colorFormMasterElementTextTitle"
+            android:textColor="@color/colorFormMasterElementTextValue"
             android:textSize="@dimen/elementTextTitleSize"
             android:textStyle="bold"
             android:clickable="true"
