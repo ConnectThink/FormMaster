@@ -83,6 +83,8 @@ public class FormElementPickerDateViewHolder extends BaseViewHolder {
             mCalendarCurrentDate.set(Calendar.MONTH, monthOfYear);
             mCalendarCurrentDate.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
+            ((FormElementPickerDate)mFormElement).setCalendarDate(mCalendarCurrentDate);
+
             String myFormatDate = ((FormElementPickerDate) mFormElement).getDateFormat();
             SimpleDateFormat sdfDate = new SimpleDateFormat(myFormatDate, Locale.US);
 

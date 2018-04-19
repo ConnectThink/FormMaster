@@ -1,6 +1,8 @@
 package me.riddhimanadib.formmaster.model;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -9,6 +11,7 @@ import java.util.Locale;
 
 public class FormElementPickerDate extends BaseFormElement {
 
+    private Calendar calendarDate;
     private String dateFormat; // custom format for date
 
     public FormElementPickerDate() {
@@ -59,6 +62,14 @@ public class FormElementPickerDate extends BaseFormElement {
     // custom getter
     public String getDateFormat() {
         return this.dateFormat;
+    }
+
+    public Calendar getCalendarDate() {
+        return calendarDate;
+    }
+
+    public void setCalendarDate(Calendar calendarDate) {
+        this.calendarDate = calendarDate;
     }
 
     private void checkValidDateFormat(String format) {

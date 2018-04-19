@@ -82,6 +82,8 @@ public class FormElementPickerTimeViewHolder extends BaseViewHolder {
             mCalendarCurrentTime.set(Calendar.HOUR_OF_DAY, hourOfDay);
             mCalendarCurrentTime.set(Calendar.MINUTE, minute);
 
+            ((FormElementPickerTime)mFormElement).setCalendarTime(mCalendarCurrentTime);
+
             String myFormatTime = ((FormElementPickerTime) mFormElement).getTimeFormat(); // custom format
             SimpleDateFormat sdfTime = new SimpleDateFormat(myFormatTime, Locale.US);
 
