@@ -71,6 +71,7 @@ public class FormElementPickerSingleViewHolder extends BaseViewHolder {
             }
         });
 
+        mTextViewTitle.setEnabled(formElement.isEnabled());
         mTextViewTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

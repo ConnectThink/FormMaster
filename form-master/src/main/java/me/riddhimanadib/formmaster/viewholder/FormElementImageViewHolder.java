@@ -170,6 +170,7 @@ public class FormElementImageViewHolder extends BaseViewHolder {
         if (imageStore != null) {
             for (i = 0; i < imageStore.length; i++) {
                 final ImageView iView = new ImageView(new ContextThemeWrapper(context, R.style.image_inline), null, 0);
+                iView.setEnabled(formElement.isEnabled());
                 iView.setMaxWidth(mImageView.getWidth());
                 iView.setMinimumHeight(mImageView.getHeight());
                 iView.setImageBitmap(imageStore[i].getTiserBitMap());

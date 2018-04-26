@@ -57,7 +57,6 @@ public class FormElementPickerTimeViewHolder extends BaseViewHolder {
         mEditTextValue.setHint(formElement.getHint());
         mEditTextValue.setFocusableInTouchMode(false);
         mEditTextValue.setEnabled(formElement.isEnabled());
-
         mEditTextValue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +64,7 @@ public class FormElementPickerTimeViewHolder extends BaseViewHolder {
             }
         });
 
+        mTextViewTitle.setEnabled(formElement.isEnabled());
         mTextViewTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

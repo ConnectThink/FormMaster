@@ -27,6 +27,8 @@ public class FormElementClickableLabelHolder extends BaseViewHolder {
     public void bind(int position, final BaseFormElement formElement, final Context context) {
         super.bind(position, formElement, context);
 
+        mTextViewTitle.setEnabled(formElement.isEnabled());
+
         mTextViewTitle.setText(formElement.getTitle());
 
         mTextViewTitle.setOnClickListener(new View.OnClickListener() {
